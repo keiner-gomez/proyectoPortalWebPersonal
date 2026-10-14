@@ -1,0 +1,285 @@
+
+:root {
+  --azul: #172554;
+  --azul-claro: #243b70;
+  --verde: #2f855a;
+  --naranja: #f59e0b;
+  --fondo: #f4f7fb;
+  --blanco: #ffffff;
+  --texto: #1564ee;
+}
+
+/* estilos generales de la pagina */
+body {
+   background-image: url("img/fondo2.png"); 
+   background-repeat: no-repeat;        
+   background-position: center center;  
+   background-size: cover;              
+   background-attachment: fixed;
+  color: var(--texto);
+  font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+}
+
+/* titulos con letra sencilla */
+h1, h2, h3, h5, .navbar-brand {
+  font-weight: bold;
+}
+
+/* separar el contenido para que no se amiontone */
+section {
+  padding: 55px 0;
+}
+
+.fondo-oscuro {
+   background-image: url("img/fondoGamer.png");
+   background-repeat: no-repeat;
+   
+   
+}
+
+/* estilos de los titulos de cada seccion */
+.titulo-seccion {
+  border-left: 5px solid var(--naranja);
+  padding-left: 12px;
+  margin-bottom: 25px;
+  color: white;
+}
+
+
+/* barra de navegacion */
+.navbar {
+  background-color: var(--azul);
+  border-bottom: 4px solid var(--verde);
+}
+
+.navbar-brand span {
+  color: var(--naranja);
+}
+
+.nav-link:hover {
+  color: #ffd166 !important;
+}
+
+/* portada principal */
+#inicio {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(120deg, #172554, #315b83);
+  color: var(--blanco);
+  padding: 60px 0;
+}
+
+#inicio h1 {
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  line-height: 1.1;
+}
+
+#inicio h1 em {
+  color: #ffd166;
+  font-style: normal;
+}
+
+.btn-gamer {
+  background-color: var(--verde);
+  border: 1px solid var(--verde);
+  color: white;
+}
+
+.btn-gamer:hover {
+  background-color: #246b46;
+  color: white;
+}
+
+.btn-outline-gamer {
+  border: 2px solid var(--naranja);
+  color: var(--naranja);
+}
+
+.btn-outline-gamer:hover,
+.btn-outline-gamer.activo {
+  background-color: var(--naranja);
+  color: var(--azul);
+}
+
+.caja {
+  background-color: white;
+  border: 1px solid #050505;
+  border-radius: 8px;
+  padding: 22px;
+  box-shadow: 0 2px 6px #17255412;
+}
+
+.card {
+  background-color: var(--blanco);
+  border: 1px solid #d5deeb;
+  color: var(--texto);
+  height: 100%;
+}
+
+.card:hover {
+  border-color: var(--verde);
+}
+
+/* cada juego tiene un banner con su nombre y un color distinto */
+.banner {
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.banner-valorant { background-color: #b84a50; }
+.banner-lol { background-color: #315b83; }
+.banner-cs2 { background-color: #a96519; }
+.banner-dota { background-color: #743b3b; }
+
+
+/* colores del acordion y pregntas frecuentes */
+.accordion-item,
+.accordion-button {
+  background-color: var(--blanco);
+  color: var(--texto);
+  border-color: #d5deeb;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e1ebf7;
+  color: var(--azul);
+}
+
+/* campos y desplegables */
+.form-control,
+.form-select {
+  background-color: white;
+  color: var(--texto);
+  border: 1px solid #bdc9da;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 0.2rem #2f855a30;
+}
+
+/* footer */
+footer{
+  background-image: url("img/footer.png"); 
+  background-repeat: no-repeat;       
+  background-position: center center;  
+
+}
+
+body {
+  color: #ffffff;
+}
+
+.nav-link,
+footer,
+footer a,
+#historia p,
+#glosario p,
+#contacto .form-label,
+#contacto #resultadoContacto {
+  color: #ffffff;
+}
+
+.caja,
+.card,
+.accordion-item,
+.accordion-button,
+.form-control,
+.form-select {
+  color: #172554;
+}
+
+.caja h5,
+.card-title,
+.caja strong {
+  color: #172554;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #172554;
+}
+
+footer a:hover {
+  color: #ffd166;
+}
+
+#esports .caja p {
+    color: #172554 !important;
+}
+
+#esports .caja h5 {
+    color: #172554 !important;
+}
+
+
+#historia,
+#esports,
+#glosario,
+#contacto {
+    color: #ffffff;
+}
+
+#historia > .container > p,
+#esports > .container > p,
+#glosario > .container > p,
+#contacto > .container > p {
+    color: #ffffff !important;
+}
+
+#historia .caja,
+#esports .caja,
+#glosario .caja,
+#historia .card,
+#esports .card,
+#glosario .card {
+    background-color: #ffffff;
+    color: #172554 !important;
+}
+
+#historia .caja h3,
+#historia .caja h4,
+#historia .caja h5,
+#esports .caja h3,
+#esports .caja h4,
+#esports .caja h5,
+#glosario .caja h3,
+#glosario .caja h4,
+#glosario .caja h5,
+.card-title {
+    color: #172554 !important;
+}
+
+/* Descripciones dentro de tarjetas blancas */
+#historia .caja p,
+#esports .caja p,
+#glosario .caja p,
+#historia .card p,
+#esports .card p,
+#glosario .card p {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554;
+    opacity: 1;
+}
+
+/* Formularios y controles */
+#contacto .form-label {
+    color: #0d0c0c !important;
+}
+
+#contacto .form-control,
+#contacto .form-select {
+    color: #172554 !important;
+    background-color: #ffffff;
+}
+
+

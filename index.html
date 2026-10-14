@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Videojuegos y eSports</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- navbar-expand-lg = se muestra completa en pantallas grandes y colapsa en pantallas pequeñas
+       sticky-top = se queda pegada arriba al hacer scroll -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fs-3" href="#inicio">Juegos<span>Competitivos</span></a>
+      <!-- boton burguer: solo se ve en celulares data-bs-toggle="collapse" y data-bs-target="#menu"
+            indican a Bootstrap que abra o cierre el elemento con id "menu" -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <!-- lista del menu ms-auto empuja los enlaces a la derecha.
+             Cada href="#" es un redirigimiento al hacer clic baja hasta el elemento que tenga ese mismo id -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#esports">eSports</a></li>
+          <li class="nav-item"><a class="nav-link" href="#juegos">Juegos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#glosario">Glosario</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- maim primera sección que ve el usuario Lleva un título grande, una descripción
+         y dos botones (llamadas a la acción). El fondo degradado está en el CSS (#inicio). -->
+    <header id="inicio">
+      <div class="container">
+        <p class="text-info mb-2">Portal Web</p>
+        <h1 class="mb-3">DEL ARCADE AL ESTADIO:<br>LA HISTORIA DE LOS <em>VIDEOJUEGOS</em> Y LOS ESPORTS</h1>
+        <p class="lead col-lg-7 mb-4">
+          Hace menos de 70 años un experimento de laboratorio fue el primer videojuego. Hoy las
+          finales se juegan ante millones de espectadores. Recorre este viaje con nosotros.
+        </p>
+        <a href="#historia" class="btn btn-gamer btn-lg me-2">Explorar la historia</a>
+        <a href="#esports" class="btn btn-outline-gamer btn-lg">¿Qué son los eSports?</a>
+      </div>
+    </header>
+
+   
+    <!-- sección estática -->
+    <section id="historia">
+      <div class="container">
+        <h2 class="titulo-seccion">HISTORIA DE LOS VIDEOJUEGOS</h2>
+        <p class="mb-4 col-lg-8">Un recorrido sencillo por algunos momentos importantes de los videojuegos.</p>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><h5>1950-1970</h5><p class="small mb-0">Aparecen los primeros experimentos como Tennis for Two y Spacewar!. En 1972 llega Pong. <a href="https://www.youtube.com/watch?v=6PG2mdU_i8k">Ir a YouTube</a>
+</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><h5>Años 80</h5><p class="small mb-0">Pac-Man y Super Mario Bros. se vuelven populares y crecen las salas de arcade.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><h5>Años 90</h5><p class="small mb-0">Los juegos de pelea y estrategia impulsan los primeros torneos competitivos.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><h5>Años 2000</h5><p class="small mb-0">Internet facilita las partidas en línea y aparecen ligas organizadas.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><h5>Años 2010</h5><p class="small mb-0">League of Legends, Dota 2 y las plataformas de streaming aumentan el público de los eSports.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><h5>Años 2020</h5><p class="small mb-0">Los torneos internacionales y los juegos competitivos siguen creciendo en todo el mundo.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- esports explica el concepto, quién participa y resuelve dudas con un acordion -->
+    <section id="esports" class="fondo-oscuro">
+      <div class="container">
+        <h2 class="titulo-seccion">¿QUÉ SON LOS ESPORTS?</h2>
+        <p class="col-lg-8 mb-4">
+          Los deportes electrónicos, también llamados ciberdeportes o eSports,son competiciones organizadas de videojuegos 
+          en las que participan jugadores individuales o equipos. Las competiciones pueden desarrollarse de forma presencial 
+          o en línea y abarcan diferentes géneros de videojuegos, entre ellos los juegos de estrategia en tiempo real, los videojuegos de disparos en primera persona, los juegos multijugador de arena de batalla en línea (conocido por sus siglas en inglés MOBA videojuego multijugador de arena de batalla en línea), los juegos de lucha y los videojuegos deportivos.
+        </p>
+        <!--  "row" es una fila y "col-*" son columnas (máximo 12 por fila).
+             col-md-6 = 2 columnas en tablet; col-lg-3 = 4 columnas en escritorio; en celular cada una ocupa todo el ancho
+             g-4 = espacio (gutter) entre columnas. h-100 hace que todas las cajas midan lo mismo de alto -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-6 col-lg-3"><div class="caja h-100"><h5>Jugadores</h5><p class="small mb-0">Entrenan a diario: mecánica, comunicación y toma de decisiones bajo presión.</p></div></div>
+          <div class="col-md-6 col-lg-3"><div class="caja h-100"><h5>Staff técnico</h5><p class="small mb-0">Entrenadores y analistas estudian partidas y preparan estrategias.</p></div></div>
+          <div class="col-md-6 col-lg-3"><div class="caja h-100"><h5>Ligas y torneos</h5><p class="small mb-0">Organizaciones como ESL o Riot Games montan los calendarios y los premios.</p></div></div>
+          <div class="col-md-6 col-lg-3"><div class="caja h-100"><h5>Streaming</h5><p class="small mb-0">Plataformas como Twitch y YouTube llevan las partidas a todo el mundo.</p></div></div>
+        </div>
+
+        <h3 class="mb-3">Preguntas frecuentes</h3>
+        <!-- acordion de bostrap componente de Bootstrap con paneles que se abren y cierran
+             data-bs-target apunta al panel (id f1, f2, f3) y data-bs-parent="#faq" hace que solo uno esté abierto a la vez
+             "show" deja abierto el primer panel por defecto -->
+        <div class="accordion" id="faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">¿Los eSports son un deporte de verdad?</button></h2>
+            <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Es un debate abierto. No hay esfuerzo físico como en el fútbol, pero sí entrenamiento, disciplina, trabajo en equipo y competencia profesional. Por eso se les llama "deportes electrónicos".</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">¿Cómo se llega a ser jugador profesional?</button></h2>
+            <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Normalmente se empieza en el ranking del juego, luego en torneos amateur y equipos semiprofesionales, hasta que una organización ofrece un contrato.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f3">¿Qué carreras existen además de jugar?</button></h2>
+            <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Hay entrenadores, analistas, comentaristas (casters), organizadores de eventos, productores de transmisión, community managers y desarrolladores de software.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- juegos con  tarjetas (card) con la ficha de cada juego competitivo
+          -->
+    <section id="juegos">
+      <div class="container">
+        <h2 class="titulo-seccion">JUEGOS COMPETITIVOS DESTACADOS</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3"><div class="card">
+            <div class="banner banner-valorant">VALORANT</div>
+            <div class="card-body"><h5 class="card-title">Valorant</h5>
+              <p class="small mb-1">Género: shooter táctico 5v5</p>
+              <p class="small mb-1">Desarrollador: Riot Games</p>
+              <p class="small mb-0">Lanzamiento: 2020</p></div></div></div>
+          <div class="col-12 col-md-6 col-lg-3"><div class="card">
+            <div class="banner banner-lol">LEAGUE OF LEGENDS</div>
+            <div class="card-body"><h5 class="card-title">League of Legends</h5>
+              <p class="small mb-1">Género: MOBA 5v5</p>
+              <p class="small mb-1">Desarrollador: Riot Games</p>
+              <p class="small mb-0">Lanzamiento: 2009</p></div></div></div>
+          <div class="col-12 col-md-6 col-lg-3"><div class="card">
+            <div class="banner banner-cs2">COUNTER-STRIKE 2</div>
+            <div class="card-body"><h5 class="card-title">Counter-Strike 2</h5>
+              <p class="small mb-1">Género: shooter táctico 5v5</p>
+              <p class="small mb-1">Desarrollador: Valve</p>
+              <p class="small mb-0">Lanzamiento: 2023 (saga desde 1999)</p></div></div></div>
+          <div class="col-12 col-md-6 col-lg-3"><div class="card">
+            <div class="banner banner-dota">DOTA 2</div>
+            <div class="card-body"><h5 class="card-title">Dota 2</h5>
+              <p class="small mb-1">Género: MOBA 5v5</p>
+              <p class="small mb-1">Desarrollador: Valve</p>
+              <p class="small mb-0">Lanzamiento: 2013</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="glosario" class="fondo-oscuro">
+      <div class="container">
+        <h2 class="titulo-seccion">GLOSARIO GAMER</h2>
+        <p class="mb-4">Algunas palabras comunes en los videojuegos competitivos.</p>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><strong>MOBA</strong><p class="small mb-0">Arena de batalla multijugador en línea: dos equipos destruyen la base rival.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><strong>FPS</strong><p class="small mb-0">Shooter en primera persona. También significa "cuadros por segundo".</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><strong>Meta</strong><p class="small mb-0">Las estrategias y personajes más efectivos en el momento actual.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><strong>Buff / Nerf</strong><p class="small mb-0">Cambios de balance: el buff fortalece un elemento y el nerf lo debilita.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><strong>Scrim</strong><p class="small mb-0">Partida de práctica entre equipos, sin valor en un torneo.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><strong>Roster</strong><p class="small mb-0">Lista de jugadores que forman un equipo.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><strong>Caster</strong><p class="small mb-0">Comentarista que narra las partidas durante la transmisión.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="caja h-100"><strong>GG</strong><p class="small mb-0">"Good game": se dice al terminar una partida como muestra de respeto.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!--contact-->
+    <section id="contacto">
+      <div class="container">
+        <h2 class="titulo-seccion">SUGIERE UN TEMA</h2>
+        <div class="row justify-content-center"><div class="col-lg-8">
+          <form id="formContacto" class="caja">
+            <div class="row g-3">
+              <div class="col-md-6"><label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" class="form-control" required minlength="3">
+                <div class="invalid-feedback">Escribe al menos 3 caracteres.</div></div>
+              <div class="col-md-6"><label for="correo" class="form-label">Correo</label>
+                <input type="email" id="correo" class="form-control" required>
+                <div class="invalid-feedback">Escribe un correo válido.</div></div>
+              <div class="col-12"><label for="tema" class="form-label">Tema de interés</label>
+                <select id="tema" class="form-select" required>
+                  <option value="">Selecciona...</option>
+                  <option>Historia de los videojuegos</option><option>eSports</option>
+                  <option>Valorant</option><option>League of Legends</option><option>Counter-Strike 2</option>
+                </select>
+                <div class="invalid-feedback">Selecciona un tema.</div></div>
+              <div class="col-12"><label for="mensaje" class="form-label">Mensaje</label>
+                <textarea id="mensaje" rows="4" class="form-control" required minlength="10"></textarea>
+                <div class="invalid-feedback">Mínimo 10 caracteres.</div></div>
+              <div class="col-12"><button type="submit" class="btn btn-gamer btn-lg">Enviar sugerencia</button></div>
+            </div>
+            <p id="resultadoContacto" class="mt-3 mb-0" aria-live="polite"></p>
+          </form>
+        </div></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- foter. -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4"><h5>Enlaces rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="#historia">Historia</a></li><li><a href="#esports">eSports</a></li>
+            <li><a href="#juegos">Juegos</a></li><li><a href="#glosario">Glosario</a></li>
+          </ul></div>
+      <hr class="border-secondary">
+      <p class="text-center small mb-0">&copy; Keiner Gomez</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS (menú hamburguesa y acordeón) -->
+  <!-- SCRIPTS AL FINAL del body: así la página se dibuja primero y el JS carga después,
+       cuando todos los elementos ya existen. Este es el JS de Bootstrap (necesario para el menú hamburguesa y el acordeón). -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript propio: solo muestra una confirmación cuando se envía el formulario. -->
+  <script src="script.js"></script>
+</body>
+</html>
